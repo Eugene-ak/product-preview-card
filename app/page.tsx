@@ -1,5 +1,5 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import mobileImage from "@/public/images/image-product-mobile.jpg";
 import desktopImage from "@/public/images/image-product-desktop.jpg";
 import cartIcon from "@/public/images/icon-cart.svg";
@@ -68,7 +68,7 @@ export default function Home() {
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Eugene Amedior</a>.
+        . Coded by <a href="https://portfolio-website-27ll.onrender.com/">Eugene Amedior</a>.
       </footer>
     </>
   );
