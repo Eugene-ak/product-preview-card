@@ -26,13 +26,13 @@ export default function Home() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [screenWidth]);
 
   return (
     <>
       <main className={style.main}>
         <section className={`${style.section} ${style.parent_container}`}>
-          <section className={style.section}>
+          <section className={`${style.section} ${style.image_container}`}>
             <Image src={image} className={style.image} alt="product" />
           </section>
 

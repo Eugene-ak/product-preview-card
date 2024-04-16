@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Eugene-ak/product-preview-card.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://product-preview-card-murex-seven.vercel.app/](https://product-preview-card-murex-seven.vercel.app/)
 
 ## My process
 
