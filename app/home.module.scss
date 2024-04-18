@@ -10,15 +10,6 @@
   .section {
     width: 300px;
   }
-
-  // .image_container::after {
-  //   content: url(../public/images/image-product-desktop.jpg);
-  //   width: 50%;
-  //   height: auto;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  // }
 }
 
 @media screen and (max-width: 699px) {
@@ -27,15 +18,6 @@
     height: auto;
     flex-direction: column;
   }
-
-  // .image_container::after {
-  //   content: url(../public/images/image-product-mobile.jpg);
-  //   width: 50%;
-  //   height: auto;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  // }
 }
 
 .main {
@@ -74,7 +56,6 @@
 .image {
   width: 100%;
   height: 100%;
-  // height: auto;
 }
 
 .second_section {

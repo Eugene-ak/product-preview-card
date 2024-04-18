@@ -1,6 +1,6 @@
 # Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -44,7 +44,28 @@ Users should be able to:
 
 ### What I learned
 
-Building responsive web pages using the mobile-first workflow.
+- Building responsive web pages using the mobile-first workflow.
+- I also learnt about the html picture element which can be used to display images based on screen sizes. It enables clients download the appropriate images based on the viewport.
+
+```html
+<picture className="{style.image_container}">
+  <source
+    className="{style.image}"
+    media="(min-width: 700px)"
+    srcset="/images/image-product-desktop.jpg"
+  />
+  <source
+    className="{style.image}"
+    media="(max-width: 699px)"
+    srcset="/images/image-product-mobile.jpg"
+  />
+  <img
+    className="{style.image}"
+    src="/images/image-product-mobile.jpg"
+    alt="product"
+  />
+</picture>
+```
 
 ### Useful resources
 
@@ -78,7 +99,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 
 ## Author
 

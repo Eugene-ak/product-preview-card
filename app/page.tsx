@@ -8,34 +8,12 @@ import style from "./home.module.scss";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  // const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
-  // const [image, setImage] = useState(screenWidth < 700 ? mobileImage : desktopImage);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     const newScreenWidth = window.innerWidth;
-  //     setScreenWidth(newScreenWidth);
-  //     const img = newScreenWidth > 699 ? desktopImage : mobileImage;
-  //     setImage(img);
-  //     console.log(newScreenWidth);
-  //   };
-
-  //   // handleResize();
-
-  //   window.addEventListener('resize', handleResize);
-
-  //   // Cleanup function to remove the event listener
-  //   // return () => {
-  //   //   window.removeEventListener('resize', handleResize);
-  //   // };
-  // }, [screenWidth]);
 
   return (
     <>
       <main className={style.main}>
         <section className={`${style.parent_container}`}>
           <section className={`${style.section} ${style.image_container}`}>
-            {/* <Image src={image} className={style.image} alt="product" /> */}
             <picture className={style.image_container}>
               <source
                 className={style.image}
