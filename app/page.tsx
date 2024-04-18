@@ -8,32 +8,51 @@ import style from "./home.module.scss";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
-  const [image, setImage] = useState(screenWidth < 700 ? mobileImage : desktopImage);
+  // const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+  // const [image, setImage] = useState(screenWidth < 700 ? mobileImage : desktopImage);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const newScreenWidth = window.innerWidth;
-      setScreenWidth(newScreenWidth);
-      const img = newScreenWidth < 700 ? mobileImage : desktopImage;
-      setImage(img);
-      console.log(newScreenWidth);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const newScreenWidth = window.innerWidth;
+  //     setScreenWidth(newScreenWidth);
+  //     const img = newScreenWidth > 699 ? desktopImage : mobileImage;
+  //     setImage(img);
+  //     console.log(newScreenWidth);
+  //   };
 
-    window.addEventListener('resize', handleResize);
+  //   // handleResize();
 
-    // Cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [screenWidth]);
+  //   window.addEventListener('resize', handleResize);
+
+  //   // Cleanup function to remove the event listener
+  //   // return () => {
+  //   //   window.removeEventListener('resize', handleResize);
+  //   // };
+  // }, [screenWidth]);
 
   return (
     <>
       <main className={style.main}>
-        <section className={`${style.section} ${style.parent_container}`}>
+        <section className={`${style.parent_container}`}>
           <section className={`${style.section} ${style.image_container}`}>
-            <Image src={image} className={style.image} alt="product" />
+            {/* <Image src={image} className={style.image} alt="product" /> */}
+            <picture className={style.image_container}>
+              <source
+                className={style.image}
+                media="(min-width: 700px)"
+                srcSet="/images/image-product-desktop.jpg"
+              />
+              <source
+                className={style.image}
+                media="(max-width: 699px)"
+                srcSet="/images/image-product-mobile.jpg"
+              />
+              <img
+                className={style.image}
+                src="/images/image-product-mobile.jpg"
+                alt="product"
+              />
+            </picture>
           </section>
 
           <section className={`${style.section} ${style.second_section}`}>
@@ -68,7 +87,11 @@ export default function Home() {
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="https://portfolio-website-27ll.onrender.com/">Eugene Amedior</a>.
+        . Coded by{" "}
+        <a href="https://portfolio-website-27ll.onrender.com/">
+          Eugene Amedior
+        </a>
+        .
       </footer>
     </>
   );

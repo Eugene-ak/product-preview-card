@@ -40,7 +40,7 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- [Sass](https://styled-components.com/) - For styles
+- [Sass](sass-lang.com) - For styles
 
 ### What I learned
 
